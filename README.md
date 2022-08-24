@@ -6,7 +6,7 @@ Title: Physiological underpinning of default-mode network emergence in the human
 The following items are included:
 1. Custom code in Matlab for rCBF growth map generation and permutation test of the significance of coupling
    1) cbf.m;
-   2) cbf_growth.m;
+   2) cbf_change.m;
    2) Permutation.m;
 
 2. Input data:
