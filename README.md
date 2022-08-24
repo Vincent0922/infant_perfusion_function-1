@@ -1,6 +1,6 @@
 # Infant_CBF_Rest
 version 1.1
-Title: Physiological underpinning of default-mode network emergence in the human infant brain 
+Title: Infant brain regional cerebral blood flow increases supporting emergence of the default-mode network
 
 
 The following items are included:
