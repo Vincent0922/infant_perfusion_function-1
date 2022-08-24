@@ -16,7 +16,8 @@ The following items are included:
 	4) SM_mask.mat: mask of sensory motor network
 	5) VI_mask.mat: mask of visual network
 	6) FC_within.mat: 48 subjects x 3 networks (DMN, SM and Vis)
-	7) in cbf and cbf_mask folder, several subject in .img format for example
+	7) cbf_mask_t: mask for cbf data
+	8) in cbf folder, several subject in .img format for example
 	
 3. Expected output:
 	1) beta value (rCBF growth per month) and R square at each gray matter(GM) voxel
