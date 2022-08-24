@@ -1,4 +1,4 @@
-%cbf growth map
+%cbf change map
 load age
 cbf_mask=mean(cbf_masks,4);
 % write_ANALYZE(cbf_mask,['cbf_mask.img'],[45,54,45],[4 4 4],1,16);
