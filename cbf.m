@@ -6,12 +6,13 @@ load VI_mask.mat
 cbf_imgs=zeros(45,54,45,48);
 cbf_masks=zeros(45,54,45,48);
 cbf_m=zeros(48,8);
+cbf_sub_mask=loadimage('cbf_mask_t.img');
 for i=1:48
     cbf_sub=loadimage(['cbf/sub_',num2str(i),'.img']);
-    cbf_sub_mask=loadimage(['cbf_mask/sub_',num2str(i),'_mask.img']);
+    %cbf_sub_mask=loadimage(['cbf_mask/sub_',num2str(i),'_mask.img']);
     tmpcbf=cbf_sub.*cbf_sub_mask;
     cbf_imgs(:,:,:,i)=tmpcbf;
-    cbf_masks(:,:,:,i)=cbf_sub_mask;
+    %cbf_masks(:,:,:,i)=cbf_sub_mask;
 
     cbf_m(i,1)=mean(cbf_sub(DMN_mask==1&cbf_sub_mask>0));%PCC
     cbf_m(i,2)=mean(cbf_sub(DMN_mask==2&cbf_sub_mask>0));%MPFC
@@ -24,9 +25,9 @@ for i=1:48
     
 end
 
-cbf_masks2=sum(cbf_masks,4)==48;
+%cbf_masks2=sum(cbf_masks,4)==48;
 cbf_gm=[];
-tolmask=cbf_masks2.*gmmask;
+tolmask=cbf_sub_mask.*gmmask;
 
 for i=1:48
     tmpcbf= cbf_imgs(:,:,:,i);
